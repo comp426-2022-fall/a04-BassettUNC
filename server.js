@@ -49,7 +49,7 @@ app.post('/app/roll/', (req, res) => {
 })
 
 // sides
-app.post('/app/roll/:sides', (req,res) => {
+app.get('/app/roll/:sides', (req,res) => {
 	const sides = parseInt(req.params.sides)
     res.status(200);
     res.send(roll(sides, dice, rolls));
